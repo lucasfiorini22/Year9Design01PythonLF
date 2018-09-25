@@ -12,3 +12,5 @@ print("Hi, "+fName+" "+lName)
 
 initialName = fName[0] + '.' + lName #adding strings is concatination 
 print("Hi, "+initialName)
+
+os.system("say "+fName" "+lName)
