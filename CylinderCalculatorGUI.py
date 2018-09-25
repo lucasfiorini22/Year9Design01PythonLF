@@ -6,13 +6,17 @@ def submit():
      r = float(entr.get())
      h = float(enth.get())
 
-v = math.pi*r*r*h
-v = round(v,3)
+     v = math.pi*r*r*h
+     v = round(v,3)
 
 
-output.config(state="normal")
-output.insert(tk.INSERT,v)
-output.config(state="disabled")
+     output.config(state="normal")
+
+     outputValue = "Given\nradius:"+str(r)+" units\nheight:"+str(h)+" units\n The volume is:"+str(v)+" units cubed\n"
+
+     output.delete(1.0,tk.END)
+     output.insert(tk.INSERT,outputValue)
+     output.config(state="disabled")
 
 
 
@@ -37,6 +41,7 @@ btn.pack()
 output = tk.Text(root, width=50, height=10, borderwidth=3, relief=tk.GROOVE)
 output.config(state="disabled")
 output.pack()
+
 
 
 
