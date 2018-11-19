@@ -13,4 +13,4 @@ d = int(input(""))
 
 
 #Process
-if (a == 8 or )
+if (a == 8 or b== 9 )
