@@ -13,7 +13,7 @@ labInput1 = tk.Label(root, text = "Input 1")
 labInput1.grid(row = 5, column = 0,
 
 labInput2 = tk.Label(root, text = "Input 2")
-labInput2grid(row = 6, column = 0,
+labInput2.grid(row = 6, column = 0,
 
 labInput3 = tk.Label(root, text = "Input 3")
 labInput3.grid(row = 7, column = 0,
@@ -24,7 +24,7 @@ labInput3.grid(row = 7, column = 0,
 var1 = IntVar()
 var2 = IntVar()
 
-cHC = tk.CHeckbutton(root, text="Expand", variabl=var)
+cHC = tk.Checkbutton(root, text="Expand", variabl=var1)
 cHC = grid(row = 0, column = 1)
 
 root.mainloop() #Starts the program.

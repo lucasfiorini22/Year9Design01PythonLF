@@ -2,7 +2,7 @@ import tkinter as tk
 import math
 def submit():
 
-     print("Submit pressed")
+     print("Volume of a Cylinder")
      r = float(entr.get())
      h = float(enth.get())
 
@@ -12,7 +12,7 @@ def submit():
 
      output.config(state="normal")
 
-     outputValue = "Given\nradius:"+str(r)+" units\nheight:"+str(h)+" units\n The volume is:"+str(v)+" units cubed\n"
+     outputValue = "Given\nheight:"+str(rh+" units\n The volume is:"+str(v)+" units cubed\n"
 
      output.delete(1.0,tk.END)
      output.insert(tk.INSERT,outputValue)

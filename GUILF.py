@@ -38,11 +38,11 @@ var2 = IntVar()
 #If there is a change in the box, there is a change in the variable.
 #This is called BINDING
 
-cHC = tk.CHeckbutton(root, text="Expand", variabl=var)
+cHC = tk.CHeckbutton(root, text="Expand", variabl=var1)
 cHC = grid(row = 0, column = 1)
 
 #We are writing an EVENT DRIVE PROGRAM
 #Build the GUI
 #Start it running
 #Wait for "EVENT"
-root.mainloop() #Starts the prgram.
+root.mainloop() #Starts the program.

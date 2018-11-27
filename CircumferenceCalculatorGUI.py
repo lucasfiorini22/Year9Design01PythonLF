@@ -1,45 +1,46 @@
-#First method
+#This imports the tkinter "tool box" this contains 
+#all the support material to support GUI elements
+#by including "as tk" we are giving a short name to use.
+#
 
-import tk as tkinter
+
+
+import tkinter as tk
 import math
 def submit():
 
-	print("Circumference of the circle")
 
-	radius = float(input("Enter radius of the circle : "))
- 	circumference = 2 * math.pi * radius
+	print("Circumference of a circle")
+	r = float(entr.get())
+	circumference = 2 * math.pi * r
 
-	Enter radius of the circle : 5
-	Circumference of the circle is : 31.42
 
-#Second Method
+	output.config(state="normal")
 
-def main():
-   radius = int(input("circle radius? "))
-   pi = 3.14159
-   r = radius
-   c = 2*pi*r
-   print(2*pi*r)
-   a = pi*r*r
-   print(pi*r*r)
-   ratio = c / a
-   return(ratio)
-   print("the ratio of the circumference to the area is",ratio)
+	outputValue = "Given\nradius:"+str(r)+" units\nheight:"+str(h)+" units\n The circumference is:"+str(c)+" units squared\n"
 
-def main():
-    
-    return c/a
+	output.delete(1.0,tk.END)
+	output.insert(tk.INSERT,outputValue)
+	output.config(state="normal")
 
-ratio = main()
-print(ratio)
-# or
-print("The ratio is:", ratio)
 
-#Third Method
 
-r = input ("Enter radius of circle")
-r = float(r)
-a = 3.14*r*r
-c = 2*3.14*r
-print ("Area =" ,a)
-print ("Circumference" , c) 
+root = tk.Tk()
+root.title("Circumference of a Circle")
+
+labr = tk.Label(root, text="radius")
+labr.pack()
+
+entr = tk.Entry(root)
+entr.pack()
+
+btn = tk.Button(root, text="Submit", command=submit)
+btn.pack()
+
+output = tk.Text(root, width=60, height=15, borderwidth=4, relief=tk.GROOVE)
+output.config(state="normal")
+output.pack()
+
+
+
+root.mainloop()
