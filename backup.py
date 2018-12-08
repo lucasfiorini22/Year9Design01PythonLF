@@ -85,9 +85,9 @@ output1 = tk.Text(tab1, width=60, height=15, borderwidth=4, relief=tk.GROOVE)
 output1.config(state="normal")
 output1.pack()
 
+
 #*************
 #Tab 2
-
 
 
 
@@ -114,6 +114,15 @@ laby2.grid(row = 1, column = 2)
 
 enty2 = tk.Entry(tab2)
 enty2.grid(row = 1, column = 3)
+
+
+btn1 = tk.Button(tab2, text="Submit", command=fnc1)
+btn1.grid()
+
+output1 = tk.Text(tab2, width=60, height=2, borderwidth=5, relief=tk.GROOVE)
+output1.config(state="normal")
+output1.grid()
+
 
 
 tabControl.pack(expand=1, fill="both");
