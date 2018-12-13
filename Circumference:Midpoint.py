@@ -78,6 +78,7 @@ labr1.pack()
 entr1 = tk.Entry(tab1)
 entr1.pack()
 
+#This creates the "submit" function 
 btn1 = tk.Button(tab1, text="Submit", command=fnc1)
 btn1.pack()
 
@@ -86,13 +87,13 @@ output1.config(state="normal")
 output1.pack()
 
 #*************
+
 #Tab 2
-
-
 
 
 labx1 = tk.Label(tab2, text = "x1: ")
 labx1.grid(row = 0, column = 0)
+
 
 entx1 = tk.Entry(tab2)
 entx1.grid(row = 0, column = 1)
@@ -115,6 +116,8 @@ laby2.grid(row = 1, column = 2)
 enty2 = tk.Entry(tab2)
 enty2.grid(row = 1, column = 3)
 
+btn2 = tk.Button(tab2, text="Submit", command=fnc2)
+btn2.grid(row=3,column = 2)
 
 tabControl.pack(expand=1, fill="both");
 
