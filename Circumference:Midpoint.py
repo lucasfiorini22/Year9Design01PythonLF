@@ -42,22 +42,42 @@ def fnc1(*args):
 def fnc2(*args):
 
 
-	x1 = entx1.get()
-	x2 = entx2.get()
+	try:
 
-	y1 = entx1.get()
-	y2 = entx1.get()
-	
+		entx1.config(background = "white")
+		
+		entx2.config(background = "white")
 
-	mx = (x1+x2)/2
-	mx = round (m,2)
-	my = (y1+y2)/2
-	my = round (m,2)
+		enty1.config(background = "white")
 
-	output2.config(state="normal")
-	outputValue = "Given\n the points of a line:( "+str(x1)+","+str(y1)+" units\nThe midpoint is:"
-	output2.insert(tk.INSERT,outputValue)
-	output2.config(state="normal")
+		enty2.config(background = "white")
+
+		x1 = float(entx1.get())
+
+		x2 = float(entx2.get())
+
+		y1 = float(entx1.get())
+		y2 = float(entx1.get())
+		
+
+		mx = (x1+x2)/2
+
+		mx = round (mx,2)
+		my = (y1+y2)/2
+		my = round (my,2)
+
+		output1.config(state="normal")
+		outputValue = "Given the following points of intersection\nThe midpoint of the line is: "+str(x1)+", "+str(y1)
+		output1.insert(tk.INSERT,outputValue)
+		output1.config(state="normal")
+	except: 
+		#Challenge: How do you determine which one is bad input
+		entx1.delete(0,tk.END)
+		entx1.config(background = "red")
+		output1.config(state="normal")
+		outputValue = "BAD INPUT"
+		output1.insert(tk.INSERT,outputValue)
+		output1.config(state="normal")
 
 #***********WIDGET 5,6 (Checkboxes)***********
 #How do I track the checkbox state.
@@ -82,9 +102,9 @@ entr1.pack()
 btn1 = tk.Button(tab1, text="Submit", command=fnc1)
 btn1.pack()
 
-output1 = tk.Text(tab1, width=60, height=15, borderwidth=4, relief=tk.GROOVE)
+output1 = tk.Text(root, width=60, height=15, borderwidth=4, relief=tk.GROOVE)
 output1.config(state="normal")
-output1.pack()
+
 
 #*************
 
@@ -119,7 +139,10 @@ enty2.grid(row = 1, column = 3)
 btn2 = tk.Button(tab2, text="Submit", command=fnc2)
 btn2.grid(row=3,column = 2)
 
+
 tabControl.pack(expand=1, fill="both");
+output1.pack()
+
 
 
 
